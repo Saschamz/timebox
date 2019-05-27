@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(#222, #333);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  font-family: monospace;
+  font-weight: 400;
+  color: grey;
+  letter-spacing: 6px;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.title > span {
+  font-size: 12px;
+  margin: 0;
+}
+
+.box {
+  height: 60vh;
+  width: 60vh;
+  background: whitesmoke;
+  box-shadow: 4vh 4vh grey;
+  transition: 250ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box-container {
+  animation: 1.5s boxEntrance forwards 1;
+}
+
+.box-content {
+  height: inherit;
+  width: inherit;
+  display: inherit;
+  position: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  opacity: 0;
+
+  animation: 1.5s fadeIn forwards 1;
+  animation-delay: 666ms;
+}
+
+.time {
+  font-family: Monospace;
+  font-size: 8vh;
+  user-select: none;
+  color: #222;
+}
+
+.box:hover {
+  transform: translate(1vh, 1vh);
+  box-shadow: 3vh 3vh grey;
+}
+
+.box:active {
+  transform: translate(2vh, 2vh);
+  box-shadow: 1vh 1vh grey;
+}
+
+.box-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 400ms;
+  height: 0%;
+}
+
+i {
+  color: red;
+}
+
+.instructions {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.instruction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction > p {
+  display: inline-block;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 6px;
+}
+
+.instruction > * {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes boxEntrance {
+  0% {
+    transform: translate(2vh, calc(50vh + 100% + 2vh));
+    box-shadow: 0vh 0vh grey;
+  }
+
+  50% {
+    box-shadow: 0vh 0vh grey;
+  }
+
+  100% {
+    transform: translateY(0vh);
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Timebox</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <h1 class="title">TIMEBOX<br /><span>by Sascha Ringström</span></h1>
+    <span class="box-container">
+      <div class="box">
+        <span class="box-content">
+          <h1 class="time">00:00</h1>
+          <div class="box-fill"></div>
+          <div class="instructions">
+            <span class="instruction">
+              <i data-feather="arrow-up"></i>
+              <p>Left Click</p>
+            </span>
+            <span class="instruction">
+              <i data-feather="arrow-down"></i>
+              <p>Right Click</p>
+            </span>
+          </div>
+        </span>
+      </div>
+    </span>
+
+    <script>
+      feather.replace()
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
