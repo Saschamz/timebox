@@ -41,10 +41,11 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
 .box-container {
-  animation: 1.5s boxEntrance forwards 1;
+  animation: 800ms boxEntrance forwards 1;
 }
 
 .box-content {
@@ -56,8 +57,8 @@ body {
   align-items: inherit;
   opacity: 0;
 
-  animation: 1.5s fadeIn forwards 1;
-  animation-delay: 666ms;
+  animation: 800ms fadeIn forwards 1;
+  animation-delay: 400ms;
 }
 
 .time {
@@ -85,10 +86,6 @@ body {
   background: rgba(0, 0, 0, 0.1);
   transition: 400ms;
   height: 0%;
-}
-
-i {
-  color: red;
 }
 
 .instructions {
