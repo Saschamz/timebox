@@ -49,7 +49,10 @@ const tick = () => {
 }
 
 const invertColors = () => {
-  const boxBg = box.style.background === 'whitesmoke' ? '#222' : 'whitesmoke'
+  const boxBg =
+    window.getComputedStyle(box).backgroundColor === 'rgb(245, 245, 245)'
+      ? '#222'
+      : 'whitesmoke'
   const textColor = boxBg === 'whitesmoke' ? '#222' : 'whitesmoke'
   box.style.background = boxBg
   timeText.style.color = textColor
